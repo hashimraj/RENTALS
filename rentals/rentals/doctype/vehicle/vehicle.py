@@ -14,6 +14,7 @@ class Vehicle(WebsiteGenerator):
 		from frappe.types import DF
 
 		color: DF.Data
+		insurance_expiry: DF.Date
 		is_published: DF.Check
 		license__plate: DF.Data | None
 		make: DF.Data

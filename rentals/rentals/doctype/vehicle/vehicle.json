@@ -12,6 +12,7 @@
   "make",
   "year",
   "color",
+  "insurance_expiry",
   "column_break_navi",
   "model",
   "license__plate",
@@ -80,14 +81,21 @@
    "fieldname": "vehicle_image",
    "fieldtype": "Attach Image",
    "label": "Vehicle Image"
+  },
+  {
+   "fieldname": "insurance_expiry",
+   "fieldtype": "Date",
+   "label": "Insurance Expiry",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "has_web_view": 1,
+ "hide_toolbar": 1,
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2026-03-30 03:11:35.984852",
+ "modified": "2026-03-30 11:23:06.839119",
  "modified_by": "Administrator",
  "module": "Rentals",
  "name": "Vehicle",
