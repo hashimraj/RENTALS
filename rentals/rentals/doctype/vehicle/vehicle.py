@@ -1,10 +1,10 @@
 # Copyright (c) 2026, ALS and contributors
 # For license information, please see license.txt
 
-from frappe.model.document import Document
+from frappe.website.website_generator import WebsiteGenerator
 
 
-class Vehicle(Document):
+class Vehicle(WebsiteGenerator):
 	# begin: auto-generated types
 	# This code is auto-generated. Do not modify anything in this block.
 
@@ -14,11 +14,14 @@ class Vehicle(Document):
 		from frappe.types import DF
 
 		color: DF.Data
+		is_published: DF.Check
 		license__plate: DF.Data | None
 		make: DF.Data
 		model: DF.Data
 		name: DF.Int | None
+		route: DF.Data | None
 		title: DF.Data | None
+		vehicle_image: DF.AttachImage | None
 		year: DF.Int
 	# end: auto-generated types
 
