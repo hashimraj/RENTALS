@@ -14,6 +14,7 @@ class Vehicle(WebsiteGenerator):
 		from frappe.types import DF
 
 		color: DF.Data
+		condition: DF.Rating
 		insurance_expiry: DF.Date
 		is_published: DF.Check
 		license__plate: DF.Data | None
@@ -21,6 +22,7 @@ class Vehicle(WebsiteGenerator):
 		model: DF.Data
 		name: DF.Int | None
 		route: DF.Data | None
+		status: DF.Literal["Active", "Out of Service", "Sold", "Crushed"]
 		title: DF.Data | None
 		vehicle_image: DF.AttachImage | None
 		year: DF.Int
