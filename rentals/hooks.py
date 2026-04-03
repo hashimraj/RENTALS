@@ -141,23 +141,13 @@ doc_events = {
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"rentals.tasks.all"
-# 	],
-# 	"daily": [
-# 		"rentals.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"rentals.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"rentals.tasks.weekly"
-# 	],
-# 	"monthly": [
-# 		"rentals.tasks.monthly"
-# 	],
-# }
+scheduler_events = {
+	"Cron": {
+        "30 15 * * 3": [
+		    "rentals.api.send_payment_reminders"
+        ]
+    }
+}
 
 # Testing
 # -------
