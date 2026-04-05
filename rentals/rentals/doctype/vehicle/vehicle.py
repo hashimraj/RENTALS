@@ -13,6 +13,7 @@ class Vehicle(WebsiteGenerator):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
+		audit_completed: DF.Check
 		color: DF.Data
 		condition: DF.Rating
 		insurance_expiry: DF.Date
