@@ -120,7 +120,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2026-04-03 13:33:56.299808",
+ "modified": "2026-04-04 16:26:58.554171",
  "modified_by": "Administrator",
  "module": "Rentals",
  "name": "Vehicle",
@@ -137,6 +137,21 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Vehicle Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "read": 1,
+   "role": "Vehicle Supervisor",
    "write": 1
   }
  ],
