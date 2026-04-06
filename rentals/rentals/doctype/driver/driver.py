@@ -6,26 +6,28 @@ from frappe.model.document import Document
 
 
 class Driver(Document):
-	# begin: auto-generated types
-	# This code is auto-generated. Do not modify anything in this block.
+    # begin: auto-generated types
+    # This code is auto-generated. Do not modify anything in this block.
 
-	from typing import TYPE_CHECKING
+    from typing import TYPE_CHECKING
 
-	if TYPE_CHECKING:
-		from frappe.types import DF
+    if TYPE_CHECKING:
+        from frappe.types import DF
 
-		enabled: DF.Check
-		first_name: DF.Data
-		last_name: DF.Data | None
-		license_number: DF.Data
-		phone_number: DF.Phone | None
-		profile_image: DF.AttachImage | None
-	# end: auto-generated types
+        enabled: DF.Check
+        first_name: DF.Data
+        last_name: DF.Data | None
+        license_number: DF.Data
+        phone_number: DF.Phone | None
+        profile_image: DF.AttachImage | None
+    # end: auto-generated types
 
-	@property
-	def full_name(self):
-		print("FULL NAME CALLED")
-		return f"{self.first_name} {self.last_name}"
+    @property
+    def full_name(self):
+        print("FULL NAME CALLED")
+        if self.last_name:
+            return f"{self.first_name} {self.last_name}"
+        return self.first_name
 
-	def send_alert(self):
-		print("sending message")
+    def send_alert(self):
+        print("sending message")
