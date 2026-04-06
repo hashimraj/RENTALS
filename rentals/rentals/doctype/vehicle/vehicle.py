@@ -25,6 +25,7 @@ class Vehicle(WebsiteGenerator):
 		route: DF.Data | None
 		status: DF.Literal["Active", "Out of Service", "Sold", "Crushed"]
 		title: DF.Data | None
+		type: DF.Link | None
 		vehicle_image: DF.AttachImage | None
 		year: DF.Int
 	# end: auto-generated types
