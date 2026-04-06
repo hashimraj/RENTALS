@@ -22,12 +22,4 @@ class Driver(Document):
         profile_image: DF.AttachImage | None
     # end: auto-generated types
 
-    @property
-    def full_name(self):
-        print("FULL NAME CALLED")
-        if self.last_name:
-            return f"{self.first_name} {self.last_name}"
-        return self.first_name
-
-    def send_alert(self):
-        print("sending message")
+    pass
