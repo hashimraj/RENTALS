@@ -22,5 +22,9 @@ class Driver(Document):
         profile_image: DF.AttachImage | None
     # end: auto-generated types
 
-    pass
-	#modifications done in server scripts
+    def validate(self):
+        if self.first_name:
+            if self.last_name:
+                self.full_name = f"{self.first_name} {self.last_name}"
+            else:
+                self.full_name = self.first_name
