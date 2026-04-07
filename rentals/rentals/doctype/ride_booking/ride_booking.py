@@ -29,8 +29,8 @@ class RideBooking(Document):
 
         # Ensure rate is provided
         if not self.rate:
-            frappe.throw("Please provide a rate")
-
+            self.rate = frappe.db.get_single_value("Rentals Settings", "standard_rate")
+            
         # Calculate total distance from all items
         total_distance = sum(item.distance for item in self.items if item.distance)
 
